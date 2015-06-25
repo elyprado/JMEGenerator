@@ -1,0 +1,6 @@
+ERROR:7:package com.jme3.asset does not exist
+ERROR:8:package com.jme3.bullet does not exist
+ERROR:9:package com.jme3.scene does not exist
+ERROR:18:cannot find symbol\n  symbol\d   class AssetManager\n  location\d interface mygame.track.TrackInterface
+ERROR:18:cannot find symbol\n  symbol\d   class Node\n  location\d interface mygame.track.TrackInterface
+ERROR:18:cannot find symbol\n  symbol\d   class PhysicsSpace\n  location\d interface mygame.track.TrackInterface

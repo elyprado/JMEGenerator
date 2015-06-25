@@ -1,0 +1,41 @@
+<#assign licenseFirst = "/*">
+<#assign licensePrefix = " * ">
+<#assign licenseLast = " */">
+<#include "../Licenses/license-${project.license}.txt">
+
+<#if package?? && package != "">
+package ${package};
+
+</#if>
+
+
+import com.jme3.asset.AssetManager;
+import com.jme3.bullet.PhysicsSpace;
+import com.jme3.scene.Node;
+import java.util.ArrayList;
+import mygame.track.parts.Part;
+
+/**
+ *
+ * @author ${user}
+ */
+public class ${name}  implements TrackInterface {
+	private ArrayList<Part> parts = new ArrayList<Part>();
+	public void createTrack(AssetManager assetManager, Node rootNode, PhysicsSpace physicsSpace) {
+             ${content}
+
+            for (Part part : parts) {
+
+                part.createPart(assetManager);
+                part.attach(rootNode, physicsSpace);
+            }
+
+            FloorBox floorBox = new FloorBox();
+            floorBox.createFloorBox(assetManager, rootNode, physicsSpace, parts);
+	} 
+
+	public ArrayList<Part> getParts() {
+            return parts;
+	}
+
+}

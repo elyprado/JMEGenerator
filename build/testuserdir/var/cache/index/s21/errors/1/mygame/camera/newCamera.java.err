@@ -1,0 +1,8 @@
+ERROR:7:package com.jme3.input does not exist
+ERROR:8:package com.jme3.math does not exist
+ERROR:9:package com.jme3.renderer does not exist
+ERROR:10:package com.jme3.scene does not exist
+ERROR:11:package com.jme3.scene.control does not exist
+ERROR:21:cannot find symbol\n  symbol\d   class CameraNode\n  location\d class mygame.camera.newCamera
+ERROR:23:cannot find symbol\n  symbol\d   class FlyByCamera\n  location\d class mygame.camera.newCamera
+ERROR:23:cannot find symbol\n  symbol\d   class Camera\n  location\d class mygame.camera.newCamera

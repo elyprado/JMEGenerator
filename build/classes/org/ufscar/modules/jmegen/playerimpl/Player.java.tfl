@@ -1,0 +1,382 @@
+<#assign licenseFirst = "/*">
+<#assign licensePrefix = " * ">
+<#assign licenseLast = " */">
+<#include "../Licenses/license-${project.license}.txt">
+
+<#if package?? && package != "">
+package ${package};
+
+</#if>
+
+import com.jme3.asset.AssetManager;
+import com.jme3.bullet.PhysicsSpace;
+import com.jme3.math.FastMath;
+import com.jme3.math.Quaternion;
+import com.jme3.math.Vector3f;
+import com.jme3.scene.Node;
+import com.jme3.scene.Spatial;
+
+<#if typePlayer == "car">
+import com.jme3.bounding.BoundingBox;
+import com.jme3.bullet.collision.shapes.CollisionShape;
+import com.jme3.bullet.control.VehicleControl;
+import com.jme3.bullet.objects.VehicleWheel;
+import com.jme3.bullet.util.CollisionShapeFactory;
+import com.jme3.renderer.queue.RenderQueue;
+import com.jme3.scene.Geometry;
+</#if>
+<#if typePlayer == "character">
+import com.jme3.bullet.collision.shapes.CapsuleCollisionShape;
+import com.jme3.bullet.control.CharacterControl;
+</#if>
+/**
+ *
+ * @author ${user}
+ */
+
+//typePlayer: ${typePlayer}
+
+<#if typePlayer == "car">
+public class ${name} implements CarInterface {
+    private VehicleControl player;
+    private VehicleWheel fr, fl, br, bl;
+    private Node node_fr, node_fl, node_br, node_bl;
+    private float wheelRadius;
+    private float steeringValue = 0;
+    private float accelerationValue = 0;
+    private Node carNode;
+    private boolean accelerate = false;
+    private boolean turnLeft = false;
+    private boolean turnRight = false;
+    private boolean brake = false;
+
+    public ${name}() {
+    }
+
+    public void buildPlayer(PhysicsSpace physicsSpace, Node rootNode, AssetManager assetManager) {
+        float stiffness = ${carStiffness}f;//200=f1 car
+        float compValue = ${carCompValue}f; //(lower than damp!)
+        float dampValue = ${carDampValue}f;
+        final float mass = ${carMass}f; //original: 400
+
+        //Load model and get chassis Geometry
+        carNode = (Node) assetManager.loadModel("Models/Ferrari/Car.j3o");
+        
+
+        carNode.setShadowMode(RenderQueue.ShadowMode.Cast);
+        Geometry chasis = findGeom(carNode, "Car");
+        BoundingBox box = (BoundingBox) chasis.getModelBound();
+
+        //Create a hull collision shape for the chassis
+        CollisionShape carHull = CollisionShapeFactory.createDynamicMeshShape(chasis);
+
+        //Create a vehicle control
+        player = new VehicleControl(carHull, mass);
+        carNode.addControl(player);
+
+        //Setting default values for wheels
+        player.setSuspensionCompression(compValue * 2.0f * FastMath.sqrt(stiffness));
+        player.setSuspensionDamping(dampValue * 2.0f * FastMath.sqrt(stiffness));
+        player.setSuspensionStiffness(stiffness);
+        player.setMaxSuspensionForce(10000);
+
+        //Create four wheels and add them at their locations
+        //note that our fancy car actually goes backwards..
+        Vector3f wheelDirection = new Vector3f(0, -1, 0);
+        Vector3f wheelAxle = new Vector3f(-1, 0, 0);
+
+        Geometry wheel_fr = findGeom(carNode, "WheelFrontRight");
+        wheel_fr.center();
+        box = (BoundingBox) wheel_fr.getModelBound();
+        wheelRadius = box.getYExtent();
+        float back_wheel_h = (wheelRadius * 1.7f) - 1f;
+        float front_wheel_h = (wheelRadius * 1.9f) - 1f;
+        player.addWheel(wheel_fr.getParent(), box.getCenter().add(0, -front_wheel_h, 0),
+                wheelDirection, wheelAxle, 0.2f, wheelRadius, true);
+
+        Geometry wheel_fl = findGeom(carNode, "WheelFrontLeft");
+        wheel_fl.center();
+        box = (BoundingBox) wheel_fl.getModelBound();
+        player.addWheel(wheel_fl.getParent(), box.getCenter().add(0, -front_wheel_h, 0),
+                wheelDirection, wheelAxle, 0.2f, wheelRadius, true);
+
+        Geometry wheel_br = findGeom(carNode, "WheelBackRight");
+        wheel_br.center();
+        box = (BoundingBox) wheel_br.getModelBound();
+        player.addWheel(wheel_br.getParent(), box.getCenter().add(0, -back_wheel_h, 0),
+                wheelDirection, wheelAxle, 0.2f, wheelRadius, false);
+
+        Geometry wheel_bl = findGeom(carNode, "WheelBackLeft");
+        wheel_bl.center();
+        box = (BoundingBox) wheel_bl.getModelBound();
+        player.addWheel(wheel_bl.getParent(), box.getCenter().add(0, -back_wheel_h, 0),
+                wheelDirection, wheelAxle, 0.2f, wheelRadius, false);
+
+        player.getWheel(0).setFrictionSlip(${carFrontFrictionSlip}f);
+        player.getWheel(1).setFrictionSlip(${carFrontFrictionSlip}f);
+        player.getWheel(2).setFrictionSlip(${carBackFrictionSlip}f); 
+        player.getWheel(3).setFrictionSlip(${carBackFrictionSlip}f); 
+
+        rootNode.attachChild(carNode);
+        
+        physicsSpace.add(player);
+
+        
+        player.setPhysicsLocation(new Vector3f(10, 1, -10));
+    }
+
+    public void unbuildPlayer(PhysicsSpace physicsSpace, Node rootNode, AssetManager assetManager) {
+        physicsSpace.remove(player);
+        rootNode.detachChild(carNode);
+    }
+
+    private Geometry findGeom(Spatial spatial, String name) {
+        if (spatial instanceof Node) {
+            Node node = (Node) spatial;
+            for (int i = 0; i < node.getQuantity(); i++) {
+                Spatial child = node.getChild(i);
+                Geometry result = findGeom(child, name);
+                if (result != null) {
+                    return result;
+                }
+            }
+        } else if (spatial instanceof Geometry) {
+            if (spatial.getName().startsWith(name)) {
+                return (Geometry) spatial;
+            }
+        }
+        return null;
+    }
+
+    public void turnRight(boolean turnRight) {
+        this.turnRight = turnRight;
+    }
+
+    public void turnLeft(boolean turnLeft) {
+        this.turnLeft = turnLeft;
+    }
+
+    public void forward(boolean accelerate) {
+        this.accelerate = accelerate;
+        if (!accelerate) {
+            accelerationValue = 0;
+            player.accelerate(accelerationValue);
+        }
+    }
+
+    public void backward(boolean brake) {
+        this.brake = brake;
+        if (!brake) {
+            player.brake(0f);
+        } else {
+            if (player.getCurrentVehicleSpeedKmHour() <= -2) {
+                player.brake(140f);
+            } else {
+                player.accelerate(400);
+            }
+        }
+
+    }
+
+    public void action(boolean action) {
+    }
+
+    public void update() {
+        if (accelerate) {
+            if (accelerationValue > -${carMaxAcceleration}) {
+                accelerationValue -= 160;
+                player.accelerate(accelerationValue);
+            }
+            if (player.getCurrentVehicleSpeedKmHour() <= -${carMaxSpeedKmHour}) {
+                //velocidade máxima
+                player.accelerate(accelerationValue / 10);
+            }
+        }
+        if (turnLeft) {
+            if (steeringValue <= .5f) {
+                steeringValue += ${carSteeringIncrease}f;
+                player.steer(steeringValue);
+            }
+        } else {
+            //volta a direção
+            if (steeringValue > 0) {
+                steeringValue -= ${carSteeringIncrease}f;
+                if (steeringValue < 0.01) {
+                    steeringValue = 0;
+                }
+                player.steer(steeringValue);
+            }
+        }
+        if (turnRight) {
+            if (steeringValue >= -.5f) {
+                steeringValue -= ${carSteeringIncrease}f;
+                player.steer(steeringValue);
+            }
+        } else {
+            //volta a direção
+            if (steeringValue < 0) {
+                steeringValue += ${carSteeringIncrease}f;
+                player.steer(steeringValue);
+                if (steeringValue > -0.01) {
+                    steeringValue = 0;
+                }
+            }
+        }
+    }
+
+    public Node getNode() {
+        return carNode;
+    }
+
+    public float getSteeringValue() {
+        return steeringValue;
+    }
+
+    public boolean isAccelerate() {
+        return accelerate;
+    }
+
+    public float getSpeed() {
+        return player.getCurrentVehicleSpeedKmHour();
+    }
+
+    public void setPhysicsLocation(Vector3f vec) {
+        player.setPhysicsLocation(vec);
+    }
+
+    public void setPhysicisRotation(Quaternion rot) {
+        player.setPhysicsRotation(rot);
+    }
+
+    public boolean isTurnRight() {
+        return this.turnRight;
+    }
+
+    public boolean isTurnLeft() {
+        return this.turnLeft;
+    }
+
+    public boolean isForward() {
+        return this.accelerate;
+    }
+
+    public boolean isBackward() {
+        return this.brake;
+    }
+</#if>
+<#if typePlayer == "character">
+public class ${name} implements PlayerInterface {
+    private CharacterControl physicsCharacter;
+    private Node characterNode;
+    Vector3f walkDirection;
+    Vector3f viewDirection;
+    boolean forward = false, backward = false,
+            leftRotate = false, rightRotate = false;
+
+    public ${name}() {
+    }
+
+    public void buildPlayer(PhysicsSpace physicsSpace, Node rootNode, AssetManager assetManager) {
+        physicsCharacter = new CharacterControl(new CapsuleCollisionShape(0.5f, 1.8f), .1f);
+        physicsCharacter.setPhysicsLocation(new Vector3f(0, 1, 0));
+        characterNode = new Node("character node");
+        Spatial model = assetManager.loadModel("Models/Sinbad/Sinbad.mesh.j3o");
+        model.scale(0.25f);
+        model.setLocalRotation(new Quaternion(0, 1, 0, 0));
+        characterNode.addControl(physicsCharacter);
+        physicsSpace.add(physicsCharacter);
+        rootNode.attachChild(characterNode);
+        
+        
+        
+        characterNode.attachChild(model);
+        
+
+        walkDirection = physicsCharacter.getWalkDirection();
+        viewDirection = physicsCharacter.getViewDirection();
+    }
+
+    public void unbuildPlayer(PhysicsSpace physicsSpace, Node rootNode, AssetManager assetManager) {
+        physicsSpace.remove(physicsCharacter);
+        rootNode.detachChild(characterNode);
+    }
+
+    public void update() {
+
+
+        if (leftRotate) {
+            Quaternion rotateL = new Quaternion().fromAngleAxis(FastMath.PI * ${charRotateIncrease}f, Vector3f.UNIT_Y);
+            rotateL.multLocal(viewDirection);
+
+        } else if (rightRotate) {
+            Quaternion rotateL = new Quaternion().fromAngleAxis(FastMath.PI * -${charRotateIncrease}f, Vector3f.UNIT_Y);
+            rotateL.multLocal(viewDirection);
+        }
+
+
+        walkDirection.set(0, 0, 0);
+
+        Vector3f modelForwardDir = characterNode.getWorldRotation().mult(Vector3f.UNIT_Z);
+        if (forward) {
+            walkDirection.addLocal(modelForwardDir.negate().mult(${charWalkForward}f));
+        } else if (backward) {
+            walkDirection.addLocal(modelForwardDir.multLocal(${charWalkBackward}f));
+        }
+
+
+        physicsCharacter.setWalkDirection(walkDirection);
+        physicsCharacter.setViewDirection(viewDirection);
+    }
+
+    public void turnRight(boolean rightRotate) {
+        this.rightRotate = rightRotate;
+    }
+
+    public void turnLeft(boolean leftRotate) {
+        this.leftRotate = leftRotate;
+    }
+
+    public void forward(boolean forward) {
+        this.forward = forward;
+    }
+
+    public void backward(boolean backward) {
+        this.backward = backward;
+    }
+    
+    public void action(boolean action) {
+        if (action) {
+            physicsCharacter.jump();
+        }
+    }
+
+    public void setPhysicsLocation(Vector3f vec) {
+        physicsCharacter.setPhysicsLocation(vec);
+    }
+
+    public void setPhysicisRotation(Quaternion rot) {
+        viewDirection = rot.mult(viewDirection);
+    }
+
+    public Node getNode() {
+        return characterNode;
+    }
+
+    public boolean isTurnRight() {
+        return this.rightRotate;
+    }
+
+    public boolean isTurnLeft() {
+        return this.leftRotate;
+    }
+
+    public boolean isForward() {
+        return this.forward;
+    }
+
+    public boolean isBackward() {
+        return this.backward;
+    }
+
+</#if>
+}

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Editors">
+        <folder name="text">
+            <folder name="camjmegen+xml">
+                <folder name="MultiView">
+                    <file name="org-ufscar-modules-jmegen-camera-camjmegenDataObject-createEditor.instance">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject.createEditor(org.openide.util.Lookup)-->
+                        <attr
+                            methodvalue="org.netbeans.core.spi.multiview.MultiViewFactory.createMultiViewDescription" name="instanceCreate"/>
+                        <attr name="instanceClass" stringvalue="org.netbeans.core.multiview.ContextAwareDescription"/>
+                        <attr name="class" stringvalue="org.ufscar.modules.jmegen.camera.camjmegenDataObject"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.camera.Bundle#LBL_camjmegen_EDITOR" name="displayName"/>
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr name="preferredID" stringvalue="camjmegen"/>
+                        <attr intvalue="1" name="persistenceType"/>
+                        <attr intvalue="1000" name="position"/>
+                        <attr name="method" stringvalue="createEditor"/>
+                        <attr boolvalue="true" name="sourceview"/>
+                    </file>
+                    <file name="org-ufscar-modules-jmegen-camera-camjmegenVisualElement.instance">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenVisualElement-->
+                        <attr
+                            methodvalue="org.netbeans.core.spi.multiview.MultiViewFactory.createMultiViewDescription" name="instanceCreate"/>
+                        <attr name="instanceClass" stringvalue="org.netbeans.core.multiview.ContextAwareDescription"/>
+                        <attr name="class" stringvalue="org.ufscar.modules.jmegen.camera.camjmegenVisualElement"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.camera.Bundle#LBL_camjmegen_VISUAL" name="displayName"/>
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr name="preferredID" stringvalue="camjmegenVisual"/>
+                        <attr intvalue="2" name="persistenceType"/>
+                        <attr intvalue="2000" name="position"/>
+                    </file>
+                </folder>
+            </folder>
+            <folder name="playerjmegen+xml">
+                <folder name="MultiView">
+                    <file name="org-ufscar-modules-jmegen-player-JMEPlayerDataObject-createEditor.instance">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject.createEditor(org.openide.util.Lookup)-->
+                        <attr
+                            methodvalue="org.netbeans.core.spi.multiview.MultiViewFactory.createMultiViewDescription" name="instanceCreate"/>
+                        <attr name="instanceClass" stringvalue="org.netbeans.core.multiview.ContextAwareDescription"/>
+                        <attr name="class" stringvalue="org.ufscar.modules.jmegen.player.JMEPlayerDataObject"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.player.Bundle#LBL_JMEPlayer_EDITOR" name="displayName"/>
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr name="preferredID" stringvalue="JMEPlayer"/>
+                        <attr intvalue="1" name="persistenceType"/>
+                        <attr intvalue="1000" name="position"/>
+                        <attr name="method" stringvalue="createEditor"/>
+                        <attr boolvalue="true" name="sourceview"/>
+                    </file>
+                    <file name="org-ufscar-modules-jmegen-player-JMEPlayerVisualElement.instance">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerVisualElement-->
+                        <attr
+                            methodvalue="org.netbeans.core.spi.multiview.MultiViewFactory.createMultiViewDescription" name="instanceCreate"/>
+                        <attr name="instanceClass" stringvalue="org.netbeans.core.multiview.ContextAwareDescription"/>
+                        <attr name="class" stringvalue="org.ufscar.modules.jmegen.player.JMEPlayerVisualElement"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.player.Bundle#LBL_JMEPlayer_VISUAL" name="displayName"/>
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr name="preferredID" stringvalue="JMEPlayerVisual"/>
+                        <attr intvalue="2" name="persistenceType"/>
+                        <attr intvalue="2000" name="position"/>
+                    </file>
+                </folder>
+            </folder>
+            <folder name="trackjmegen+xml">
+                <folder name="MultiView">
+                    <file name="org-ufscar-modules-jmegen-track-trackjmegenDataObject-createEditor.instance">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject.createEditor(org.openide.util.Lookup)-->
+                        <attr
+                            methodvalue="org.netbeans.core.spi.multiview.MultiViewFactory.createMultiViewDescription" name="instanceCreate"/>
+                        <attr name="instanceClass" stringvalue="org.netbeans.core.multiview.ContextAwareDescription"/>
+                        <attr name="class" stringvalue="org.ufscar.modules.jmegen.track.trackjmegenDataObject"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.track.Bundle#LBL_trackjmegen_EDITOR" name="displayName"/>
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr name="preferredID" stringvalue="trackjmegen"/>
+                        <attr intvalue="1" name="persistenceType"/>
+                        <attr intvalue="1000" name="position"/>
+                        <attr name="method" stringvalue="createEditor"/>
+                        <attr boolvalue="true" name="sourceview"/>
+                    </file>
+                    <file name="org-ufscar-modules-jmegen-track-trackjmegenVisualElement.instance">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenVisualElement-->
+                        <attr
+                            methodvalue="org.netbeans.core.spi.multiview.MultiViewFactory.createMultiViewDescription" name="instanceCreate"/>
+                        <attr name="instanceClass" stringvalue="org.netbeans.core.multiview.ContextAwareDescription"/>
+                        <attr name="class" stringvalue="org.ufscar.modules.jmegen.track.trackjmegenVisualElement"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.track.Bundle#LBL_trackjmegen_VISUAL" name="displayName"/>
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr name="preferredID" stringvalue="trackjmegenVisual"/>
+                        <attr intvalue="2" name="persistenceType"/>
+                        <attr intvalue="2000" name="position"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Services">
+        <folder name="MIMEResolver">
+            <file name="org-ufscar-modules-jmegen-camera-camjmegenDataObject-Namespace.xml">
+                <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                <attr
+                    methodvalue="org.openide.filesystems.MIMEResolver.create" name="instanceCreate"/>
+                <attr name="instanceClass" stringvalue="org.openide.filesystems.MIMEResolver"/>
+                <attr name="mimeType" stringvalue="text/camjmegen+xml"/>
+                <attr name="ext.0" stringvalue="xml"/>
+                <attr name="element" stringvalue=""/>
+                <attr name="ns.0" stringvalue="camjmegen"/>
+                <attr
+                    bundlevalue="org.ufscar.modules.jmegen.camera.Bundle#LBL_camjmegen_LOADER" name="displayName"/>
+            </file>
+            <file name="org-ufscar-modules-jmegen-player-JMEPlayerDataObject-Namespace.xml">
+                <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                <attr
+                    methodvalue="org.openide.filesystems.MIMEResolver.create" name="instanceCreate"/>
+                <attr name="instanceClass" stringvalue="org.openide.filesystems.MIMEResolver"/>
+                <attr name="mimeType" stringvalue="text/playerjmegen+xml"/>
+                <attr name="ext.0" stringvalue="xml"/>
+                <attr name="element" stringvalue=""/>
+                <attr name="ns.0" stringvalue="playerjmegen"/>
+                <attr
+                    bundlevalue="org.ufscar.modules.jmegen.player.Bundle#LBL_JMEPlayer_LOADER" name="displayName"/>
+            </file>
+            <file name="org-ufscar-modules-jmegen-track-trackjmegenDataObject-Namespace.xml">
+                <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                <attr
+                    methodvalue="org.openide.filesystems.MIMEResolver.create" name="instanceCreate"/>
+                <attr name="instanceClass" stringvalue="org.openide.filesystems.MIMEResolver"/>
+                <attr name="mimeType" stringvalue="text/trackjmegen+xml"/>
+                <attr name="ext.0" stringvalue="xml"/>
+                <attr name="element" stringvalue=""/>
+                <attr name="ns.0" stringvalue="trackjmegen"/>
+                <attr
+                    bundlevalue="org.ufscar.modules.jmegen.track.Bundle#LBL_trackjmegen_LOADER" name="displayName"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Loaders">
+        <folder name="text">
+            <folder name="camjmegen+xml">
+                <folder name="Actions">
+                    <file name="org-openide-actions-OpenAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-OpenAction.instance"/>
+                        <attr intvalue="100" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-OpenAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="200" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CutAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-CutAction.instance"/>
+                        <attr intvalue="300" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CopyAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-CopyAction.instance"/>
+                        <attr intvalue="400" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CopyAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="500" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-DeleteAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-DeleteAction.instance"/>
+                        <attr intvalue="600" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-RenameAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-RenameAction.instance"/>
+                        <attr intvalue="700" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-RenameAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="800" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-SaveAsTemplateAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-SaveAsTemplateAction.instance"/>
+                        <attr intvalue="900" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-SaveAsTemplateAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="1000" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-FileSystemAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-FileSystemAction.instance"/>
+                        <attr intvalue="1100" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-FileSystemAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="1200" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-ToolsAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-ToolsAction.instance"/>
+                        <attr intvalue="1300" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-PropertiesAction.shadow">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr intvalue="1400" name="position"/>
+                    </file>
+                </folder>
+                <folder name="Factories">
+                    <file name="org-ufscar-modules-jmegen-camera-camjmegenDataObject.instance">
+                        <!--org.ufscar.modules.jmegen.camera.camjmegenDataObject-->
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr intvalue="300" name="position"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.camera.Bundle#LBL_camjmegen_LOADER" name="displayName"/>
+                        <attr
+                            methodvalue="org.openide.loaders.DataLoaderPool.factory" name="instanceCreate"/>
+                        <attr name="dataObjectClass" stringvalue="org.ufscar.modules.jmegen.camera.camjmegenDataObject"/>
+                        <attr name="mimeType" stringvalue="text/camjmegen+xml"/>
+                    </file>
+                </folder>
+            </folder>
+            <folder name="playerjmegen+xml">
+                <folder name="Actions">
+                    <file name="org-openide-actions-OpenAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-OpenAction.instance"/>
+                        <attr intvalue="100" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-OpenAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="200" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CutAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-CutAction.instance"/>
+                        <attr intvalue="300" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CopyAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-CopyAction.instance"/>
+                        <attr intvalue="400" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CopyAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="500" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-DeleteAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-DeleteAction.instance"/>
+                        <attr intvalue="600" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-RenameAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-RenameAction.instance"/>
+                        <attr intvalue="700" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-RenameAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="800" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-SaveAsTemplateAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-SaveAsTemplateAction.instance"/>
+                        <attr intvalue="900" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-SaveAsTemplateAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="1000" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-FileSystemAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-FileSystemAction.instance"/>
+                        <attr intvalue="1100" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-FileSystemAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="1200" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-ToolsAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-ToolsAction.instance"/>
+                        <attr intvalue="1300" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-PropertiesAction.shadow">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr intvalue="1400" name="position"/>
+                    </file>
+                </folder>
+                <folder name="Factories">
+                    <file name="org-ufscar-modules-jmegen-player-JMEPlayerDataObject.instance">
+                        <!--org.ufscar.modules.jmegen.player.JMEPlayerDataObject-->
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr intvalue="300" name="position"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.player.Bundle#LBL_JMEPlayer_LOADER" name="displayName"/>
+                        <attr
+                            methodvalue="org.openide.loaders.DataLoaderPool.factory" name="instanceCreate"/>
+                        <attr name="dataObjectClass" stringvalue="org.ufscar.modules.jmegen.player.JMEPlayerDataObject"/>
+                        <attr name="mimeType" stringvalue="text/playerjmegen+xml"/>
+                    </file>
+                </folder>
+            </folder>
+            <folder name="trackjmegen+xml">
+                <folder name="Actions">
+                    <file name="org-openide-actions-OpenAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-OpenAction.instance"/>
+                        <attr intvalue="100" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-OpenAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="200" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CutAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-CutAction.instance"/>
+                        <attr intvalue="300" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CopyAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-CopyAction.instance"/>
+                        <attr intvalue="400" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-CopyAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="500" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-DeleteAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-DeleteAction.instance"/>
+                        <attr intvalue="600" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-RenameAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-RenameAction.instance"/>
+                        <attr intvalue="700" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-RenameAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="800" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-SaveAsTemplateAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-SaveAsTemplateAction.instance"/>
+                        <attr intvalue="900" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-SaveAsTemplateAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="1000" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-FileSystemAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-FileSystemAction.instance"/>
+                        <attr intvalue="1100" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-FileSystemAction-separatorAfter.instance">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                        <attr intvalue="1200" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-ToolsAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-ToolsAction.instance"/>
+                        <attr intvalue="1300" name="position"/>
+                    </file>
+                    <file name="org-openide-actions-PropertiesAction.shadow">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr intvalue="1400" name="position"/>
+                    </file>
+                </folder>
+                <folder name="Factories">
+                    <file name="org-ufscar-modules-jmegen-track-trackjmegenDataObject.instance">
+                        <!--org.ufscar.modules.jmegen.track.trackjmegenDataObject-->
+                        <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/iconxml.png"/>
+                        <attr intvalue="300" name="position"/>
+                        <attr
+                            bundlevalue="org.ufscar.modules.jmegen.track.Bundle#LBL_trackjmegen_LOADER" name="displayName"/>
+                        <attr
+                            methodvalue="org.openide.loaders.DataLoaderPool.factory" name="instanceCreate"/>
+                        <attr name="dataObjectClass" stringvalue="org.ufscar.modules.jmegen.track.trackjmegenDataObject"/>
+                        <attr name="mimeType" stringvalue="text/trackjmegen+xml"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Templates">
+        <folder name="JMEGenerator">
+            <file name="TrackImpl.java" url="nbresloc:/org/ufscar/modules/jmegen/trackimpl/Track.java.tfl">
+                <!--org.ufscar.modules.jmegen.trackimpl.JMETrackImplWizardIterator-->
+                <attr boolvalue="true" name="template"/>
+                <attr name="displayName" stringvalue="Track Implementation"/>
+                <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/icon.png"/>
+                <attr name="instantiatingWizardURL" urlvalue="nbresloc:/org/ufscar/modules/jmegen/trackimpl/jMETrackImpl.html"/>
+                <attr name="instantiatingIterator" newvalue="org.ufscar.modules.jmegen.trackimpl.JMETrackImplWizardIterator"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+            <file name="Camera.xml" url="nbresloc:/org/ufscar/modules/jmegen/camera/camjmegenTemplate.xml">
+                <!--org.ufscar.modules.jmegen.camera-->
+                <attr boolvalue="true" name="template"/>
+            </file>
+            <file name="Track.xml" url="nbresloc:/org/ufscar/modules/jmegen/track/trackjmegenTemplate.xml">
+                <!--org.ufscar.modules.jmegen.track-->
+                <attr boolvalue="true" name="template"/>
+            </file>
+            <file name="CameraImpl.java" url="nbresloc:/org/ufscar/modules/jmegen/cameraimpl/Camera.java.tfl">
+                <!--org.ufscar.modules.jmegen.cameraimpl.JMECameraImplWizardIterator-->
+                <attr boolvalue="true" name="template"/>
+                <attr name="displayName" stringvalue="Camera Implementation"/>
+                <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/icon.png"/>
+                <attr name="instantiatingWizardURL" urlvalue="nbresloc:/org/ufscar/modules/jmegen/cameraimpl/jMECameraImpl.html"/>
+                <attr name="instantiatingIterator" newvalue="org.ufscar.modules.jmegen.cameraimpl.JMECameraImplWizardIterator"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+            <file name="Player.xml" url="nbresloc:/org/ufscar/modules/jmegen/player/playerjmegenTemplate.xml">
+                <!--org.ufscar.modules.jmegen.player-->
+                <attr boolvalue="true" name="template"/>
+            </file>
+            <file name="PlayerImpl.java" url="nbresloc:/org/ufscar/modules/jmegen/playerimpl/Player.java.tfl">
+                <!--org.ufscar.modules.jmegen.playerimpl.JMEPlayerImplWizardIterator-->
+                <attr boolvalue="true" name="template"/>
+                <attr name="displayName" stringvalue="Player Implementation"/>
+                <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/icon.png"/>
+                <attr name="instantiatingWizardURL" urlvalue="nbresloc:/org/ufscar/modules/jmegen/playerimpl/jMEPlayerImpl.html"/>
+                <attr name="instantiatingIterator" newvalue="org.ufscar.modules.jmegen.playerimpl.JMEPlayerImplWizardIterator"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+        </folder>
+        <folder name="Project">
+            <folder name="JMEGenerator">
+                <file name="JMEGeneratorProject.zip" url="nbresloc:/org/ufscar/modules/jmegen/project/JMEGeneratorProject.zip">
+                    <!--org.ufscar.modules.jmegen.project.JMEGeneratorProjectWizardIterator-->
+                    <attr boolvalue="true" name="template"/>
+                    <attr
+                        bundlevalue="org.ufscar.modules.jmegen.project.Bundle#JMEGeneratorProject_displayName" name="displayName"/>
+                    <attr name="iconBase" stringvalue="org/ufscar/modules/jmegen/project/JMEGeneratorProject.png"/>
+                    <attr name="instantiatingWizardURL" urlvalue="nbresloc:/org/ufscar/modules/jmegen/project/JMEGeneratorProjectDescription.html"/>
+                    <attr name="instantiatingIterator" newvalue="org.ufscar.modules.jmegen.project.JMEGeneratorProjectWizardIterator"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

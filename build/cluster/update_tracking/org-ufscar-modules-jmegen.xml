@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.ufscar.modules.jmegen">
+    <module_version install_time="1395256371239" last="true" origin="installer" specification_version="1.1">
+        <file crc="4224169952" name="config/Modules/org-ufscar-modules-jmegen.xml"/>
+        <file crc="2048626919" name="modules/org-ufscar-modules-jmegen.jar"/>
+    </module_version>
+</module>

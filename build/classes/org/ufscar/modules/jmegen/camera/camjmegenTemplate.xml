@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:root xmlns:ns2="camjmegen">
+    <typecam>freeCam</typecam>
+    <backDistance>6.0</backDistance>
+    <overDistance>40.0</overDistance>
+    <chaseDefDist>10.0</chaseDefDist>
+    <chaseMaxDist>16.0</chaseMaxDist>
+    <chaseMinDist>4.0</chaseMinDist>
+    <chaseSensitivity>20.0</chaseSensitivity>
+    <steerDistance>6.0</steerDistance>
+    <steerCurve>2.0</steerCurve>
+</ns2:root>

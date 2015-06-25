@@ -1,0 +1,10 @@
+ERROR:7:package com.jme3.math does not exist
+ERROR:8:package com.jme3.math does not exist
+ERROR:23:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.track.StartPositionCalculator
+ERROR:24:cannot find symbol\n  symbol\d   class Quaternion\n  location\d class mygame.track.StartPositionCalculator
+ERROR:27:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.track.StartPositionCalculator
+ERROR:28:cannot find symbol\n  symbol\d   class Quaternion\n  location\d class mygame.track.StartPositionCalculator
+ERROR:31:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.track.StartPositionCalculator
+ERROR:32:cannot find symbol\n  symbol\d   class Quaternion\n  location\d class mygame.track.StartPositionCalculator
+ERROR:36:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.track.StartPositionCalculator
+ERROR:37:cannot find symbol\n  symbol\d   class Quaternion\n  location\d class mygame.track.StartPositionCalculator

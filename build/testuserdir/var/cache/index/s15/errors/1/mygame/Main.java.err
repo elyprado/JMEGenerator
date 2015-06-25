@@ -1,0 +1,80 @@
+ERROR:4:cannot find symbol\n  symbol\d   class PlayerImpl\n  location\d package mygame.player
+ERROR:5:cannot find symbol\n  symbol\d   class TrackImpl\n  location\d package mygame.track
+ERROR:6:cannot find symbol\n  symbol\d   class CameraImpl\n  location\d package mygame.camera
+ERROR:7:package com.jme3.app does not exist
+ERROR:8:package com.jme3.bullet does not exist
+ERROR:9:package com.jme3.bullet does not exist
+ERROR:10:package com.jme3.input does not exist
+ERROR:11:package com.jme3.input does not exist
+ERROR:12:package com.jme3.input.controls does not exist
+ERROR:13:package com.jme3.input.controls does not exist
+ERROR:14:package com.jme3.input.controls does not exist
+ERROR:15:package com.jme3.input.controls does not exist
+ERROR:16:package com.jme3.input.event does not exist
+ERROR:17:package com.jme3.light does not exist
+ERROR:18:package com.jme3.math does not exist
+ERROR:19:package com.jme3.shadow does not exist
+ERROR:26:cannot find symbol\n  symbol\d class SimpleApplication
+ERROR:26:cannot find symbol\n  symbol\d class ActionListener
+ERROR:26:cannot find symbol\n  symbol\d class TouchListener
+ERROR:28:cannot find symbol\n  symbol\d   class BulletAppState\n  location\d class mygame.Main
+ERROR:63:cannot find symbol\n  symbol\d   class TouchEvent\n  location\d class mygame.Main
+ERROR:118:cannot find symbol\n  symbol\d   class PhysicsSpace\n  location\d class mygame.Main
+ERROR:30:cannot find symbol\n  symbol\d   class PlayerImpl\n  location\d class mygame.Main
+ERROR:31:cannot find symbol\n  symbol\d   class CameraImpl\n  location\d class mygame.Main
+ERROR:32:cannot find symbol\n  symbol\d   class TrackImpl\n  location\d class mygame.Main
+ERROR:40:cannot find symbol\n  symbol\d   method start()\n  location\d variable app of type mygame.Main
+ERROR:44:cannot find symbol\n  symbol\d   class KeyTrigger\n  location\d class mygame.Main
+ERROR:44:cannot find symbol\n  symbol\d   variable KeyInput\n  location\d class mygame.Main
+ERROR:44:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:45:cannot find symbol\n  symbol\d   class KeyTrigger\n  location\d class mygame.Main
+ERROR:45:cannot find symbol\n  symbol\d   variable KeyInput\n  location\d class mygame.Main
+ERROR:45:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:46:cannot find symbol\n  symbol\d   class KeyTrigger\n  location\d class mygame.Main
+ERROR:46:cannot find symbol\n  symbol\d   variable KeyInput\n  location\d class mygame.Main
+ERROR:46:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:47:cannot find symbol\n  symbol\d   class KeyTrigger\n  location\d class mygame.Main
+ERROR:47:cannot find symbol\n  symbol\d   variable KeyInput\n  location\d class mygame.Main
+ERROR:47:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:48:cannot find symbol\n  symbol\d   class KeyTrigger\n  location\d class mygame.Main
+ERROR:48:cannot find symbol\n  symbol\d   variable KeyInput\n  location\d class mygame.Main
+ERROR:48:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:49:cannot find symbol\n  symbol\d   class KeyTrigger\n  location\d class mygame.Main
+ERROR:49:cannot find symbol\n  symbol\d   variable KeyInput\n  location\d class mygame.Main
+ERROR:49:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:50:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:51:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:52:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:53:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:54:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:55:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:58:cannot find symbol\n  symbol\d   class TouchTrigger\n  location\d class mygame.Main
+ERROR:58:cannot find symbol\n  symbol\d   variable TouchInput\n  location\d class mygame.Main
+ERROR:58:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:59:cannot find symbol\n  symbol\d   variable inputManager\n  location\d class mygame.Main
+ERROR:62:method does not override or implement a method from a supertype
+ERROR:84:cannot find symbol\n  symbol\d   class BulletAppState\n  location\d class mygame.Main
+ERROR:85:cannot find symbol\n  symbol\d   variable stateManager\n  location\d class mygame.Main
+ERROR:87:cannot find symbol\n  symbol\d   variable settings\n  location\d class mygame.Main
+ERROR:88:cannot find symbol\n  symbol\d   class BasicShadowRenderer\n  location\d class mygame.Main
+ERROR:88:cannot find symbol\n  symbol\d   class BasicShadowRenderer\n  location\d class mygame.Main
+ERROR:88:cannot find symbol\n  symbol\d   variable assetManager\n  location\d class mygame.Main
+ERROR:89:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.Main
+ERROR:90:cannot find symbol\n  symbol\d   variable viewPort\n  location\d class mygame.Main
+ERROR:96:cannot find symbol\n  symbol\d   class DirectionalLight\n  location\d class mygame.Main
+ERROR:96:cannot find symbol\n  symbol\d   class DirectionalLight\n  location\d class mygame.Main
+ERROR:97:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.Main
+ERROR:98:cannot find symbol\n  symbol\d   variable rootNode\n  location\d class mygame.Main
+ERROR:100:cannot find symbol\n  symbol\d   class DirectionalLight\n  location\d class mygame.Main
+ERROR:101:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.Main
+ERROR:102:cannot find symbol\n  symbol\d   variable rootNode\n  location\d class mygame.Main
+ERROR:105:cannot find symbol\n  symbol\d   variable rootNode\n  location\d class mygame.Main
+ERROR:105:cannot find symbol\n  symbol\d   variable assetManager\n  location\d class mygame.Main
+ERROR:107:cannot find symbol\n  symbol\d   variable assetManager\n  location\d class mygame.Main
+ERROR:107:cannot find symbol\n  symbol\d   variable rootNode\n  location\d class mygame.Main
+ERROR:113:cannot find symbol\n  symbol\d   variable assetManager\n  location\d class mygame.Main
+ERROR:113:cannot find symbol\n  symbol\d   variable rootNode\n  location\d class mygame.Main
+ERROR:115:cannot find symbol\n  symbol\d   variable flyCam\n  location\d class mygame.Main
+ERROR:115:cannot find symbol\n  symbol\d   variable cam\n  location\d class mygame.Main
+ERROR:82:method does not override or implement a method from a supertype
+ERROR:138:method does not override or implement a method from a supertype

@@ -1,0 +1,22 @@
+ERROR:7:package com.jme3.asset does not exist
+ERROR:8:package com.jme3.bullet does not exist
+ERROR:9:package com.jme3.bullet.control does not exist
+ERROR:10:package com.jme3.material does not exist
+ERROR:11:package com.jme3.math does not exist
+ERROR:12:package com.jme3.scene does not exist
+ERROR:13:package com.jme3.scene does not exist
+ERROR:14:package com.jme3.scene.shape does not exist
+ERROR:15:package com.jme3.texture does not exist
+ERROR:24:cannot find symbol\n  symbol\d   class AssetManager\n  location\d class mygame.track.FloorBox
+ERROR:24:cannot find symbol\n  symbol\d   class Node\n  location\d class mygame.track.FloorBox
+ERROR:24:cannot find symbol\n  symbol\d   class PhysicsSpace\n  location\d class mygame.track.FloorBox
+ERROR:25:cannot find symbol\n  symbol\d   class Material\n  location\d class mygame.track.FloorBox
+ERROR:25:cannot find symbol\n  symbol\d   class Material\n  location\d class mygame.track.FloorBox
+ERROR:26:cannot find symbol\n  symbol\d   class Texture\n  location\d class mygame.track.FloorBox
+ERROR:27:package Texture does not exist
+ERROR:50:cannot find symbol\n  symbol\d   class Box\n  location\d class mygame.track.FloorBox
+ERROR:50:cannot find symbol\n  symbol\d   class Box\n  location\d class mygame.track.FloorBox
+ERROR:51:cannot find symbol\n  symbol\d   class Vector2f\n  location\d class mygame.track.FloorBox
+ERROR:52:cannot find symbol\n  symbol\d   class Geometry\n  location\d class mygame.track.FloorBox
+ERROR:52:cannot find symbol\n  symbol\d   class Geometry\n  location\d class mygame.track.FloorBox
+ERROR:56:cannot find symbol\n  symbol\d   class RigidBodyControl\n  location\d class mygame.track.FloorBox

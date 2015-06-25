@@ -1,0 +1,15 @@
+ERROR:7:package com.jme3.asset does not exist
+ERROR:8:package com.jme3.scene does not exist
+ERROR:9:package com.jme3.scene does not exist
+ERROR:10:package com.jme3.texture does not exist
+ERROR:11:package com.jme3.util does not exist
+ERROR:19:cannot find symbol\n  symbol\d   class AssetManager\n  location\d class mygame.Sky
+ERROR:19:cannot find symbol\n  symbol\d   class Node\n  location\d class mygame.Sky
+ERROR:21:cannot find symbol\n  symbol\d   class Texture\n  location\d class mygame.Sky
+ERROR:22:cannot find symbol\n  symbol\d   class Texture\n  location\d class mygame.Sky
+ERROR:23:cannot find symbol\n  symbol\d   class Texture\n  location\d class mygame.Sky
+ERROR:24:cannot find symbol\n  symbol\d   class Texture\n  location\d class mygame.Sky
+ERROR:25:cannot find symbol\n  symbol\d   class Texture\n  location\d class mygame.Sky
+ERROR:26:cannot find symbol\n  symbol\d   class Texture\n  location\d class mygame.Sky
+ERROR:28:cannot find symbol\n  symbol\d   class Spatial\n  location\d class mygame.Sky
+ERROR:28:cannot find symbol\n  symbol\d   variable SkyFactory\n  location\d class mygame.Sky

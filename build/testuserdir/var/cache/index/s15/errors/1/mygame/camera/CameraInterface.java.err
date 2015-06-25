@@ -1,0 +1,4 @@
+ERROR:7:package com.jme3.input does not exist
+ERROR:8:package com.jme3.renderer does not exist
+ERROR:16:cannot find symbol\n  symbol\d   class FlyByCamera\n  location\d interface mygame.camera.CameraInterface
+ERROR:16:cannot find symbol\n  symbol\d   class Camera\n  location\d interface mygame.camera.CameraInterface

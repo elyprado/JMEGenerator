@@ -1,0 +1,11 @@
+ERROR:7:package com.jme3.asset does not exist
+ERROR:8:package com.jme3.bullet does not exist
+ERROR:9:package com.jme3.math does not exist
+ERROR:10:package com.jme3.math does not exist
+ERROR:11:package com.jme3.scene does not exist
+ERROR:18:cannot find symbol\n  symbol\d   class PhysicsSpace\n  location\d interface mygame.player.PlayerInterface
+ERROR:18:cannot find symbol\n  symbol\d   class Node\n  location\d interface mygame.player.PlayerInterface
+ERROR:18:cannot find symbol\n  symbol\d   class AssetManager\n  location\d interface mygame.player.PlayerInterface
+ERROR:20:cannot find symbol\n  symbol\d   class Vector3f\n  location\d interface mygame.player.PlayerInterface
+ERROR:21:cannot find symbol\n  symbol\d   class Quaternion\n  location\d interface mygame.player.PlayerInterface
+ERROR:22:cannot find symbol\n  symbol\d   class Node\n  location\d interface mygame.player.PlayerInterface

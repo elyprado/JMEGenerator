@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.ufscar.modules.jmegen
+OpenIDE-Module-Localizing-Bundle: org/ufscar/modules/jmegen/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.1
+

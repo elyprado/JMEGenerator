@@ -1,0 +1,17 @@
+ERROR:7:package com.jme3.app does not exist
+ERROR:8:package com.jme3.asset does not exist
+ERROR:9:package com.jme3.bullet does not exist
+ERROR:10:package com.jme3.bullet.control does not exist
+ERROR:11:package com.jme3.bullet.util does not exist
+ERROR:12:package com.jme3.math does not exist
+ERROR:13:package com.jme3.scene does not exist
+ERROR:14:package com.jme3.scene does not exist
+ERROR:21:cannot find symbol\n  symbol\d   class Spatial\n  location\d class mygame.track.parts.Part
+ERROR:22:cannot find symbol\n  symbol\d   class RigidBodyControl\n  location\d class mygame.track.parts.Part
+ERROR:35:cannot find symbol\n  symbol\d   class AssetManager\n  location\d class mygame.track.parts.Part
+ERROR:40:cannot find symbol\n  symbol\d   class Node\n  location\d class mygame.track.parts.Part
+ERROR:40:cannot find symbol\n  symbol\d   class PhysicsSpace\n  location\d class mygame.track.parts.Part
+ERROR:37:cannot find symbol\n  symbol\d   class RigidBodyControl\n  location\d class mygame.track.parts.Part
+ERROR:37:cannot find symbol\n  symbol\d   variable CollisionShapeFactory\n  location\d class mygame.track.parts.Part
+ERROR:41:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.track.parts.Part
+ERROR:41:cannot find symbol\n  symbol\d   class Vector3f\n  location\d class mygame.track.parts.Part

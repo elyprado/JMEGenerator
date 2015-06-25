@@ -1,0 +1,108 @@
+<#assign licenseFirst = "/*">
+<#assign licensePrefix = " * ">
+<#assign licenseLast = " */">
+<#include "../Licenses/license-${project.license}.txt">
+
+<#if package?? && package != "">
+package ${package};
+
+</#if>
+
+
+import com.jme3.input.FlyByCamera;
+import com.jme3.math.Vector3f;
+import com.jme3.renderer.Camera;
+import com.jme3.scene.CameraNode;
+import com.jme3.scene.control.CameraControl;
+import mygame.player.PlayerInterface;
+<#if typecam == "chaseCam">
+import com.jme3.input.ChaseCamera;
+import com.jme3.math.FastMath;
+</#if>
+<#if typecam == "steerCam">
+import mygame.player.CarInterface;
+</#if>
+/**
+ *
+ * @author ${user}
+ */
+
+//TypeCam: ${typecam}
+
+public class ${name} implements CameraInterface {
+    private CameraNode camNode;
+    <#if typecam == "steerCam">
+    private float cameraSteer = 0;
+    </#if>
+    <#if typecam == "chaseCam">
+    private ChaseCamera chaseCam;
+    </#if>
+
+        public void configureCam(PlayerInterface player, FlyByCamera flyCam, Camera cam) {
+          <#if typecam == "backCam" || typecam == "overCam" || typecam == "firstPersonCam" || typecam == "steerCam">
+             flyCam.setEnabled(false);
+             camNode = new CameraNode("CamNode", cam);
+             camNode.setControlDir(CameraControl.ControlDirection.SpatialToCamera);
+             player.getNode().attachChild(camNode);
+          </#if>
+          <#if typecam == "backCam">
+             camNode.setLocalTranslation(new Vector3f(0, 3, 12));
+             camNode.lookAt(player.getNode().getLocalTranslation(), Vector3f.UNIT_Y);
+             camNode.move(0, 0, ${backDistance}f - 10);
+          </#if>
+          <#if typecam == "steerCam">
+             camNode.setLocalTranslation(new Vector3f(0, 3, 12));
+             camNode.lookAt(player.getNode().getLocalTranslation(), Vector3f.UNIT_Y);
+             camNode.move(0, 0, ${steerDistance}f - 10);
+          </#if>      
+          <#if typecam == "overCam">
+            camNode.setLocalTranslation(new Vector3f(0, ${overDistance}f + 13, 12));
+            camNode.lookAt(player.getNode().getLocalTranslation(), Vector3f.UNIT_Y);
+            camNode.move(0, 0, (${overDistance}f + 13) * -13 / 55);
+          </#if>
+          <#if typecam == "firstPersonCam">
+            camNode.setLocalTranslation(new Vector3f(0, 0, 12));
+            camNode.lookAt(player.getNode().getLocalTranslation(), Vector3f.UNIT_Y);
+            camNode.setLocalTranslation(new Vector3f(0, 3, 0));
+          </#if>
+          <#if typecam == "chaseCam">
+            flyCam.setEnabled(false);
+            chaseCam = new ChaseCamera(cam, player.getNode());
+            chaseCam.setSmoothMotion(true);
+            chaseCam.setRotationSensitivity(10f);
+            chaseCam.setDefaultHorizontalRotation(FastMath.PI / 2);
+            chaseCam.setDefaultDistance(${chaseDefDist}f);
+            chaseCam.setChasingSensitivity(${chaseSensitivity}f);
+            chaseCam.setMinVerticalRotation(0);
+            chaseCam.setMaxVerticalRotation(FastMath.PI / 10);
+            chaseCam.setMaxDistance(${chaseMaxDist}f);
+            chaseCam.setMinDistance(${chaseMinDist}f);
+            chaseCam.setZoomSensitivity(1);
+            chaseCam.setDefaultVerticalRotation(FastMath.PI / 12);
+          </#if>
+         }
+
+    public void detachCam(PlayerInterface player) {
+        <#if typecam == "chaseCam">
+        chaseCam.setEnabled(false);
+        </#if>
+        <#if typecam == "backCam" || typecam == "overCam" || typecam == "firstPersonCam" || typecam == "steerCam">
+        player.getNode().detachChild(camNode);
+        </#if>
+    }
+
+     public void update(PlayerInterface player) {
+       <#if typecam == "steerCam">
+        if (player instanceof CarInterface) {
+            CarInterface car = (CarInterface) player;
+            if (cameraSteer!=car.getSteeringValue()) {
+               car.getNode().detachChild(camNode);
+               camNode.rotate(0, (cameraSteer-car.getSteeringValue())/(5 * ${steerCurve}f), 0);
+               camNode.move((cameraSteer-car.getSteeringValue()) * ${steerCurve}f, 0, 0);
+               cameraSteer = car.getSteeringValue();
+               car.getNode().attachChild(camNode);
+            }
+        }
+       </#if>
+     }
+}
